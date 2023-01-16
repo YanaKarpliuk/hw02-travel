@@ -2,10 +2,7 @@
   height: 100%;
   position: relative;
   z-index: 1;
-}
-
-.logo__image {
-  width: 115px;
+  margin-bottom: 97px;
 }
 
 .header {
@@ -69,11 +66,6 @@
   margin-right: 7px;
 }
 
-.options__language__arrow {
-  width: 9px;
-  height: 5px;
-}
-
 .hero__content {
   display: flex;
   position: relative;
@@ -131,12 +123,6 @@
   color: var(--gray-color);
 }
 
-.cta__play-img {
-  height: 15px;
-  width: 15px;
-  display: block;
-}
-
 .cta__play-bg {
   background-color: var(--tomato-color);
   border-radius: 50%;
@@ -165,20 +151,16 @@
   position: absolute;
   top: 70px;
   left: 150px;
-  width: 137px;
 }
 
 .hero__images-plane_2 {
   position: absolute;
   top: 110px;
-  right: 20px;
-  width: 137px;
+  right: 5px;
 }
 
 .decore {
   position: absolute;
   top: 0;
   right: 0;
-  height: 720px;
-  width: 700px;
 }
