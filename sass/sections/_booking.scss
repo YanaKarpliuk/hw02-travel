@@ -1,0 +1,100 @@
+.booking {
+  display: flex;
+}
+
+.booking__desc {
+  flex: 1;
+  margin-right: 118px;
+}
+
+.booking__subtitle {
+  @include font("Poppins", 600, 18px, 27px, 0);
+  color: var(--grayish-blue-color);
+  margin-bottom: 15px;
+}
+
+.booking__title {
+  @include font("Volkhov", 700, 50px, 64px, 0);
+  color: var(--dark-blue-color-2);
+  margin-bottom: 31px;
+}
+
+.booking__item {
+  display: flex;
+}
+
+.booking__item:not(:last-child) {
+  margin-bottom: 48px;
+}
+
+.booking__item-bg {
+  border-radius: 13px;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 21px;
+}
+
+.booking__item_yellow {
+  background-color: var(--dark-yellow-color);
+}
+
+.booking__item_red {
+  background-color: var(--darker-tomato-color);
+}
+
+.booking__item_blue {
+  background-color: var(--emerald-blue-color);
+}
+
+.booking__content__title {
+  @include font("Poppins", 700, 16px, 20px, 0);
+  color: var(--grayish-blue-color);
+}
+
+.booking__content__text {
+  @include font("Poppins", 400, 16px, 20px, 0);
+  color: var(--grayish-blue-color);
+}
+
+.booking__images {
+  flex: 1;
+  position: relative;
+}
+
+.booking__section {
+  position: absolute;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(var(--light-blue-color) 10%, #fff 70%);
+}
+
+.booking__image-1 {
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
+    0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
+    0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
+    0px 20px 13px rgba(0, 0, 0, 0.01),
+    0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
+    0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  width: 370px;
+}
+
+.booking__image-2 {
+  position: absolute;
+  bottom: 52px;
+  right: 0;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
+    0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
+    0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
+    0px 20px 13px rgba(0, 0, 0, 0.01),
+    0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
+    0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  width: 263px;
+  border-radius: 18px;
+}
