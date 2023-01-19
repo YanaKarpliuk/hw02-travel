@@ -8,6 +8,8 @@
 }
 
 .logos__item {
+  display: flex;
+  align-items: center;
   max-width: 241px;
   padding: 30px;
   &:hover {

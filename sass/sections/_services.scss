@@ -1,5 +1,12 @@
 .services {
   margin-bottom: 156px;
+  position: relative;
+}
+
+.services__decore {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .services__subtitle {
