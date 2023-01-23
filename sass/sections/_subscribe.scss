@@ -1,3 +1,7 @@
+.subscribe_box {
+  margin-bottom: 166px;
+}
+
 .subscribe {
   background: var(--light-violet-color);
   border-radius: 129px 20px 20px  20px ;
@@ -28,6 +32,8 @@
   padding: 25px 31px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .subscribe__input {
@@ -67,7 +73,7 @@
 
 .subscribe__pluses {
   position: absolute;
-  bottom: 0px;
+  bottom: -70px;
   right: 50px;
 }
 
