@@ -9,7 +9,7 @@
 .header {
   display: none;
   @media screen and (min-width: 1024px) {
-    display: flex;  
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
@@ -71,17 +71,30 @@
 }
 
 .hero__content {
+  padding-top: 30px;
   display: flex;
   position: relative;
-  justify-content: end;
+  @media screen and(min-width: 1024px) {
+    padding-top: 0;
+  }
+  @media screen and(min-width: 1440px) {
+    justify-content: end;
+  }
 }
 
 .hero__desc {
-  width: 545px;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
+  @media screen and(min-width: 1024px) {
+    margin-top: 100px;
+    max-width: 700px;
+  }
+
+  @media screen and(min-width: 1440px) {
+    width: 545px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 
 .hero__tagline {
@@ -92,9 +105,12 @@
 }
 
 .hero__header {
-  @include font("Volkhov", 700, 84px, 89px, -0.04em);
+  @include font("Volkhov", 700, 64px, 69px, -0.04em);
   color: var(--dark-blue-color);
   margin-bottom: 30px;
+  @media screen and(min-width: 1024px) {
+    @include font("Volkhov", 700, 84px, 89px, -0.04em);
+  }
 }
 
 .hero__text {
@@ -105,6 +121,10 @@
 
 .cta {
   display: flex;
+  flex-direction: column;
+  @media screen and(min-width: 450px) {
+    flex-direction: row;
+  }
 }
 
 .cta__findout {
@@ -115,7 +135,11 @@
   padding: 19px 27px;
   border-radius: 10px;
   box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
-  margin-right: 44px;
+  margin-bottom: 20px;
+  @media screen and(min-width: 450px) {
+    margin-right: 44px;
+    margin-bottom: 0;
+  }
 }
 
 .cta__play {
@@ -132,6 +156,7 @@
   border-radius: 50%;
   height: 52px;
   width: 52px;
+  min-width: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,24 +168,39 @@
 }
 
 .hero__images-traveller {
+  display: none;
   height: 765px;
   width: 765px;
   min-height: 765px;
   min-width: 765px;
   position: relative;
   z-index: 2;
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
 }
 
 .hero__images-plane_1 {
-  position: absolute;
-  top: 70px;
-  left: 150px;
+  display: none;
+  @media screen and (min-width: 1024px) {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 90px;
+  }
+  @media screen and (min-width: 1440px) {
+    left: 150px;
+  }
 }
 
 .hero__images-plane_2 {
   position: absolute;
   top: 110px;
   right: 5px;
+  z-index: -1;
+  @media screen and (min-width: 1024px) {
+    right: -80px;
+  }
 }
 
 .decore {
