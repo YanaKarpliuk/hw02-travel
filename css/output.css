@@ -76,9 +76,12 @@ body {
   padding-top: 50px; }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  display: none; }
+  @media screen and (min-width: 1024px) {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
 
 .menu {
   display: flex; }
@@ -830,6 +833,99 @@ body {
   letter-spacing: 0;
   color: var(--grayish-blue-color);
   text-align: center; }
+
+.mobile-menu {
+  position: absolute;
+  top: -340px;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 5;
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.3);
+  transition-property: top;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in-out; }
+  .mobile-menu:hover {
+    top: 0px;
+    transition-property: top;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out; }
+  .mobile-menu:hover .mobile-menu__arrow-icon {
+    rotate: 180deg; }
+
+.mobile-menu__main {
+  padding: 20px;
+  height: 340px; }
+
+.mobile-menu__arrow {
+  border-top: 1px solid var(--light-grayish-blue-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; }
+
+.mobile-menu__nav {
+  margin-bottom: 30px; }
+
+.mobile-menu__nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.mobile-menu__nav__link {
+  color: var(--dark-color);
+  font-family: "Product Sans Regular";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0; }
+
+.mobile-menu__nav__item:not(:last-child) {
+  margin-bottom: 15px; }
+
+.mobile-menu__options {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.mobile-menu__options__signup {
+  font-family: "Product Sans Regular";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: var(--dark-color);
+  background-color: transparent;
+  border: 1px solid var(--dark-color);
+  border-radius: 5px;
+  padding: 9px 22px; }
+
+.mobile-menu__options__login {
+  font-family: "Product Sans Regular";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: var(--dark-color);
+  margin-right: 52px; }
+
+.mobile-menu__languages {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 30px; }
+
+.mobile-menu__language {
+  display: flex;
+  align-items: center; }
+
+.mobile-menu__language__name {
+  font-family: "Product Sans Regular";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: var(--dark-color);
+  margin-right: 7px; }
 
 .main {
   height: 100vh;

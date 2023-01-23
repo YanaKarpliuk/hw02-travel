@@ -1,7 +1,13 @@
-@mixin font ($ff, $fw, $fs, $lh, $ls) {
+@mixin font($ff, $fw, $fs, $lh, $ls) {
   font-family: $ff;
   font-weight: $fw;
   font-size: $fs;
   line-height: $lh;
   letter-spacing: $ls;
+}
+
+@mixin transition($tp, $td, $ttf) {
+  transition-property: $tp;
+  transition-duration: $td;
+  transition-timing-function: $ttf;
 }
