@@ -1,9 +1,11 @@
 .hero {
-  height: 100%;
   position: relative;
   z-index: 1;
-  margin-bottom: 97px;
+  margin-bottom: 50px;
   padding-top: 50px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 97px;
+  }
 }
 
 .header {
@@ -194,10 +196,15 @@
 }
 
 .hero__images-plane_2 {
-  position: absolute;
-  top: 110px;
-  right: 5px;
-  z-index: -1;
+  display: none;
+  @media screen and (min-width: 450px) {
+    display: block;
+    position: absolute;
+    top: 110px;
+    right: 5px;
+    z-index: -1;
+  }
+
   @media screen and (min-width: 1024px) {
     right: -80px;
   }
