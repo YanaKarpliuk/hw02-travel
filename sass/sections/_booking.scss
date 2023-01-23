@@ -1,11 +1,22 @@
 .booking {
   display: flex;
   margin-bottom: 209px;
+  flex-direction: column;
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
 }
 
 .booking__desc {
   flex: 1;
-  margin-right: 118px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-right: 118px;
+  }
 }
 
 .booking__subtitle {
@@ -32,6 +43,7 @@
   border-radius: 13px;
   width: 47px;
   height: 47px;
+  min-width: 47px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,11 +84,17 @@
   height: 400px;
   border-radius: 50%;
   background: radial-gradient(var(--light-blue-color) 10%, #fff 70%);
+  @media screen and (min-width: 768px) {
+    right: 30%;
+  }
+  @media screen and (min-width: 1024px) {
+    right: 0;
+  }
 }
 
 .booking__image-1 {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  z-index: 1;
   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
     0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
     0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
@@ -84,18 +102,48 @@
     0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
     0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
   width: 370px;
+  border-radius: 26px;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    right: 50%;
+  }
+  @media screen and (min-width: 1024px) {
+    bottom: 0;
+    left: 0;
+  }
+  @media screen and (min-width: 1500px) {
+    bottom: 0;
+    left: 10%;
+  }
 }
 
 .booking__image-2 {
-  position: absolute;
-  bottom: 52px;
-  right: 0;
-  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
-    0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
-    0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
-    0px 20px 13px rgba(0, 0, 0, 0.01),
-    0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
-    0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
-  width: 263px;
-  border-radius: 18px;
+  display: none;
+  @media screen and (min-width: 450px) {
+    display: block;
+    position: absolute;
+    // bottom: 52px;
+    top: 215px;
+    z-index: 2;
+    right: 15%;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
+      0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
+      0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
+      0px 20px 13px rgba(0, 0, 0, 0.01),
+      0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
+      0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+    width: 263px;
+    border-radius: 18px;
+  }
+  @media screen and (min-width: 768px) {
+    right: 30%;
+  }
+  @media screen and (min-width: 1024px) {
+    right: 0;
+    top: unset;
+    bottom: 52px;
+  }
+  @media screen and (min-width: 1500px) {
+    right: 10%;
+  }
 }
