@@ -19,6 +19,11 @@
 
 .destinations__list {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
 }
 
 .destinations__item {
@@ -32,7 +37,11 @@
 }
 
 .destinations__item:not(:last-child) {
-  margin-right: 35px;
+  margin-bottom: 20px;
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 0;
+    margin-right: 35px;
+  }
 }
 
 .destinations__item__content {
@@ -69,8 +78,12 @@
 }
 
 .destinations__decore {
-  position: absolute;
-  right: 75px;
-  bottom: 50px;
-  z-index: -1;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: absolute;
+    right: -65px;
+    bottom: 50px;
+    z-index: -1;
+  }
 }
