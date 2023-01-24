@@ -1,11 +1,8 @@
 .hero {
   position: relative;
   z-index: 1;
-  margin-bottom: 50px;
+  margin-bottom: 97px;
   padding-top: 50px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 97px;
-  }
 }
 
 .header {
@@ -197,16 +194,49 @@
 
 .hero__images-plane_2 {
   display: none;
-  @media screen and (min-width: 450px) {
+
+  @media screen and (min-width: 768px) {
     display: block;
     position: absolute;
-    top: 110px;
-    right: 5px;
-    z-index: -1;
+    top: 250px;
+    right: 50px;
   }
 
   @media screen and (min-width: 1024px) {
     right: -80px;
+    top: 110px;
+  }
+}
+
+.hero__images-plane_animated {
+    animation: nudge linear 3s forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translate(350px, -350px);
+    opacity: 1;
+  }
+
+  41% {
+    transform: translate(350px, -350px);
+    opacity: 0;
+  }
+
+  42% {
+    transform: translate(-1200px, 350px);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
   }
 }
 

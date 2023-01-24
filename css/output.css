@@ -31,7 +31,8 @@ button {
 
 body {
   margin: 0;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
 
 * {
   box-sizing: border-box; }
@@ -85,11 +86,8 @@ body {
 .hero {
   position: relative;
   z-index: 1;
-  margin-bottom: 50px;
+  margin-bottom: 97px;
   padding-top: 50px; }
-  @media screen and (min-width: 768px) {
-    .hero {
-      margin-bottom: 97px; } }
 
 .header {
   display: none; }
@@ -295,17 +293,37 @@ body {
 
 .hero__images-plane_2 {
   display: none; }
-  @media screen and (min-width: 450px) {
+  @media screen and (min-width: 768px) {
     .hero__images-plane_2 {
       display: block;
       position: absolute;
-      top: 110px;
-      right: 5px;
-      z-index: -1; } }
+      top: 250px;
+      right: 50px; } }
   @media screen and (min-width: 1024px) {
     .hero__images-plane_2 {
-      right: -80px; } }
+      right: -80px;
+      top: 110px; } }
 
+.hero__images-plane_animated {
+  animation: nudge linear 3s forwards;
+  animation-iteration-count: 1; }
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 1; }
+  40% {
+    transform: translate(350px, -350px);
+    opacity: 1; }
+  41% {
+    transform: translate(350px, -350px);
+    opacity: 0; }
+  42% {
+    transform: translate(-1200px, 350px);
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
 .decore {
   position: absolute;
   top: 0;
