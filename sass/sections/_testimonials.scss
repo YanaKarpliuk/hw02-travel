@@ -1,6 +1,10 @@
 .testimonials {
   display: flex;
+  flex-direction: column;
   margin-bottom: 215px;
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
 }
 
 .testimonials__desc {
