@@ -844,18 +844,25 @@ body {
   text-align: center; }
 
 .subscribe__form {
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 768px) {
+    .subscribe__form {
+      flex-direction: row; } }
 
 .subscribe__input-field {
   background-color: #fff;
-  width: 421px;
-  height: 68px;
   border-radius: 10px;
   padding: 25px 31px;
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  margin-bottom: 20px; }
+  @media screen and (min-width: 768px) {
+    .subscribe__input-field {
+      width: 421px;
+      margin-bottom: 0; } }
 
 .subscribe__input {
   font-family: "Montserrat";
@@ -874,14 +881,17 @@ body {
   border: none;
   background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
   border-radius: 10px;
+  padding: 25px 31px;
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 17px;
   line-height: 23px;
   letter-spacing: 0;
-  color: #fff;
-  width: 180px;
-  margin-left: 24px; }
+  color: #fff; }
+  @media screen and (min-width: 768px) {
+    .subscribe__button {
+      margin-left: 24px;
+      width: 180px; } }
 
 .subscribe__circles_bottom {
   position: absolute;
@@ -898,12 +908,25 @@ body {
 .subscribe__pluses {
   position: absolute;
   bottom: -70px;
-  right: 50px; }
+  right: 0;
+  z-index: -10; }
+  @media screen and (min-width: 1440px) {
+    .subscribe__pluses {
+      right: 50px; } }
 
 .subscribe__send {
   position: absolute;
   top: -13px;
-  right: 115px; }
+  right: 0; }
+  @media screen and (min-width: 768px) {
+    .subscribe__send {
+      right: 30px; } }
+  @media screen and (min-width: 1024px) {
+    .subscribe__send {
+      right: 50px; } }
+  @media screen and (min-width: 1440px) {
+    .subscribe__send {
+      right: 115px; } }
 
 .footer {
   padding-bottom: 80px; }
