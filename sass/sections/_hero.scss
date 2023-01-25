@@ -1,9 +1,8 @@
 .hero {
   position: relative;
   z-index: 1;
-  // margin-bottom: 97px;
+  margin-bottom: 97px;
   padding-top: 50px;
-  height: 100vh;
 }
 
 .header {
@@ -12,6 +11,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (min-width: 1024px) {
+    display: none;
   }
 }
 

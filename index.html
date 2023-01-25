@@ -17,7 +17,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <script src="/js/animations.js" async></script>
     <title>Travel</title>
   </head>
   <body>
@@ -54,6 +53,13 @@
               </div>
             </div>
           </div>
+        </header>
+
+        <header class="mobile-header">
+          <a class="logo" href="#">
+            <object data="./images/Logo.svg"></object>
+          </a>
+          <button class="js-open mobile-menu__open-button"></button>
         </header>
         <section class="hero__content">
           <div class="hero__desc">
@@ -406,6 +412,7 @@
                 class="subscribe__input"
                 type="email"
                 placeholder="Your email"
+                value="yanakarpliuk99@gmail.com"
               />
             </div>
             <button class="subscribe__button" type="submit">Subscribe</button>
@@ -427,46 +434,40 @@
       </section>
       <object class="decore" data="./images/Decore.svg"></object>
 
-      <section class="mobile-menu">
-        <div class="mobile-menu__main">
-          <div class="mobile-menu__languages">
-            <div class="mobile-menu__language">
-              <p class="mobile-menu__language__name">EN</p>
-              <object data="./images/down.svg"></object>
-            </div>
+      <!-- Mobile menu -->
+      <section class="mobile-menu mobile-menu_closed js-mobile-menu">
+        <div class="mobile-menu__top">
+          <div class="mobile-menu__language">
+            <p class="mobile-menu__language__name">EN</p>
+            <object data="./images/down.svg"></object>
           </div>
-          <nav class="mobile-menu__nav">
-            <ul class="mobile-menu__nav__list">
-              <li class="mobile-menu__nav__item">
-                <a class="mobile-menu__nav__link" href="">Destinations</a>
-              </li>
-              <li class="mobile-menu__nav__item">
-                <a class="mobile-menu__nav__link" href="">Hotels</a>
-              </li>
-              <li class="mobile-menu__nav__item">
-                <a class="mobile-menu__nav__link" href="">Flights</a>
-              </li>
-              <li class="mobile-menu__nav__item">
-                <a class="mobile-menu__nav__link" href="">Bookings</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="mobile-menu__options">
-            <a class="mobile-menu__options__login" href="">Login</a>
-            <button class="mobile-menu__options__signup" type="button">
-              Sign up
-            </button>
-          </div>
+          <button class="js-close mobile-menu__close-button"></button>
         </div>
-        <div class="mobile-menu__arrow">
-          <object
-            class="mobile-menu__arrow-icon"
-            data="./images/arrow.svg"
-          ></object>
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__nav__list">
+            <li class="mobile-menu__nav__item">
+              <a class="mobile-menu__nav__link" href="">Destinations</a>
+            </li>
+            <li class="mobile-menu__nav__item">
+              <a class="mobile-menu__nav__link" href="">Hotels</a>
+            </li>
+            <li class="mobile-menu__nav__item">
+              <a class="mobile-menu__nav__link" href="">Flights</a>
+            </li>
+            <li class="mobile-menu__nav__item">
+              <a class="mobile-menu__nav__link" href="">Bookings</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__options">
+          <a class="mobile-menu__options__login" href="">Login</a>
+          <button class="mobile-menu__options__signup" type="button">
+            Sign up
+          </button>
         </div>
       </section>
     </main>
-    
+
     <footer class="footer container">
       <div class="footer__main">
         <div class="footer__desc">
@@ -520,5 +521,9 @@
       </div>
       <div class="footer__copyright">All rights reserved@jadoo.co</div>
     </footer>
+
+    <!-- scripts -->
+    <script src="/js/animations.js"></script>
+    <script src="/js/mobile-menu.js"></script>
   </body>
 </html>
