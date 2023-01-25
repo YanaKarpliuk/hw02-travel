@@ -1137,7 +1137,7 @@ body {
   .mobile-menu__close-button {
     background-color: transparent;
     border: none;
-    background-image: url(../../images/close.svg);
+    background-image: url(../images/close.svg);
     background-repeat: no-repeat;
     background-size: contain;
     height: 20px;
@@ -1145,7 +1145,7 @@ body {
   .mobile-menu__open-button {
     background-color: transparent;
     border: none;
-    background-image: url(../../images/open.svg);
+    background-image: url(../images/open.svg);
     background-repeat: no-repeat;
     background-size: contain;
     height: 40px;
