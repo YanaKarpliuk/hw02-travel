@@ -56,15 +56,21 @@
 
 .subscribe__button {
   border: none;
-  background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+  background: linear-gradient(180deg, var(--orange-tomato-color) 0%, var(--darker-orange-tomato-color) 100%);
   border-radius: 10px;
   padding: 25px 31px;
   @include font("Open Sans", 600, 17px, 23px, 0);
+  @include transition(background-color, 200ms, ease-in-out);
   color: #fff;
 
   @media screen and(min-width: 768px) {
     margin-left: 24px;
     width: 180px;
+  }
+
+  &:hover {
+    background-color: var(--darker-orange-tomato-color);
+    @include transition(all, 200ms, ease-in-out);
   }
 }
 

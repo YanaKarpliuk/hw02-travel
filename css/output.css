@@ -967,7 +967,7 @@ body {
 
 .subscribe__button {
   border: none;
-  background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+  background: linear-gradient(180deg, var(--orange-tomato-color) 0%, var(--darker-orange-tomato-color) 100%);
   border-radius: 10px;
   padding: 25px 31px;
   font-family: "Open Sans";
@@ -975,11 +975,19 @@ body {
   font-size: 17px;
   line-height: 23px;
   letter-spacing: 0;
+  transition-property: background-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
   color: #fff; }
   @media screen and (min-width: 768px) {
     .subscribe__button {
       margin-left: 24px;
       width: 180px; } }
+  .subscribe__button:hover {
+    background-color: var(--darker-orange-tomato-color);
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out; }
 
 .subscribe__circles_bottom {
   position: absolute;
