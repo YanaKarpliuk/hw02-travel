@@ -1111,7 +1111,15 @@ body {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0;
+  transition-property: color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
   color: var(--grayish-blue-color); }
+  .footer__item__link:hover {
+    color: var(--dark-blue-color-4);
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out; }
 
 .footer__item__link:not(:last-child) {
   margin-bottom: 12px; }
@@ -1135,7 +1143,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out; }
+  .footer__social__item:hover {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    transition-property: box-shadow;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out; }
 
 .footer__social__item:not(:last-child) {
   margin-right: 25px; }
