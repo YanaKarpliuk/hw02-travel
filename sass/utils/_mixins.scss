@@ -11,3 +11,9 @@
   transition-duration: $td;
   transition-timing-function: $ttf;
 }
+
+@mixin centered() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

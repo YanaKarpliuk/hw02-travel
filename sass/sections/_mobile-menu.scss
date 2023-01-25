@@ -15,115 +15,113 @@
   @media screen and (min-width: 1024px) {
     display: none;
   }
-}
 
-.mobile-menu_closed {
-  right: -100vw;
-  left: 100vw;
-  background-color: transparent;
-  @include transition(all, 400ms, ease-in-out);
-}
-
-.mobile-menu_opened {
-  right: 0px;
-  left: 0px;
-  @media screen and (min-width: 768px) {
-    left: 20vw;
+  &_closed {
+    right: -100vw;
+    left: 100vw;
+    background-color: transparent;
+    @include transition(all, 400ms, ease-in-out);
   }
-  @include transition(all, 400ms, ease-in-out);
-}
 
-.mobile-menu__close-button {
-  background-color: transparent;
-  border: none;
-  background-image: url(../../images/close.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 20px;
-  width: 20px;
-}
+  &_opened {
+    right: 0px;
+    left: 0px;
+    @media screen and (min-width: 768px) {
+      left: 20vw;
+    }
+    @include transition(all, 400ms, ease-in-out);
+  }
 
-.mobile-menu__open-button {
-  background-color: transparent;
-  border: none;
-  background-image: url(../../images/open.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 40px;
-  width: 40px;
+  &__close-button {
+    background-color: transparent;
+    border: none;
+    background-image: url(../../images/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+  }
+
+  &__open-button {
+    background-color: transparent;
+    border: none;
+    background-image: url(../../images/open.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
 }
 
 .mobile-menu__nav {
   margin-bottom: 30px;
-}
 
-.mobile-menu__nav__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.mobile-menu__nav__link {
-  color: var(--dark-color);
-  @include font("Product Sans Regular", 400, 25px, 30px, 0);
-  @include transition(color, 200ms, ease-in-out);
-}
-
-.mobile-menu__nav__item {
-  &:hover > .mobile-menu__nav__link {
-    color: var(--tomato-color);
+  &__link {
+    color: var(--dark-color);
+    @include font("Product Sans Regular", 400, 25px, 30px, 0);
     @include transition(color, 200ms, ease-in-out);
   }
-}
 
-.mobile-menu__nav__item:not(:last-child) {
-  margin-bottom: 15px;
+  &__item {
+    &:hover > .mobile-menu__nav__link {
+      color: var(--tomato-color);
+      @include transition(color, 200ms, ease-in-out);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .mobile-menu__options {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  @include centered();
 
-.mobile-menu__options__signup {
-  @include font("Product Sans Regular", 400, 25px, 30px, 0);
-  color: var(--dark-color);
-  background-color: transparent;
-  border: 1px solid var(--dark-color);
-  border-radius: 5px;
-  padding: 9px 22px;
-  @include transition(color, 200ms, ease-in-out);
-  &:hover {
-    color: var(--tomato-color);
+  &__signup {
+    @include font("Product Sans Regular", 400, 25px, 30px, 0);
+    color: var(--dark-color);
+    background-color: transparent;
+    border: 1px solid var(--dark-color);
+    border-radius: 5px;
+    padding: 9px 22px;
     @include transition(color, 200ms, ease-in-out);
+    &:hover {
+      color: var(--tomato-color);
+      @include transition(color, 200ms, ease-in-out);
+    }
   }
-}
 
-.mobile-menu__options__login {
-  @include font("Product Sans Regular", 400, 25px, 30px, 0);
-  @include transition(color, 200ms, ease-in-out);
-  color: var(--dark-color);
-  margin-right: 52px;
-  &:hover {
-    color: var(--tomato-color);
+  &__login {
+    @include font("Product Sans Regular", 400, 25px, 30px, 0);
     @include transition(color, 200ms, ease-in-out);
+    color: var(--dark-color);
+    margin-right: 52px;
+    &:hover {
+      color: var(--tomato-color);
+      @include transition(color, 200ms, ease-in-out);
+    }
   }
-}
-
-.mobile-menu__top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
 }
 
 .mobile-menu__language {
   display: flex;
   align-items: center;
-}
 
-.mobile-menu__language__name {
-  @include font("Product Sans Regular", 400, 17px, 22px, 0);
-  color: var(--dark-color);
-  margin-right: 7px;
+  &__name {
+    @include font("Product Sans Regular", 400, 17px, 22px, 0);
+    color: var(--dark-color);
+    margin-right: 7px;
+  }
 }

@@ -11,104 +11,108 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-}
 
-.subscribe__title {
-  @include font("Poppins", 600, 33px, 54px, 0);
-  color: var(--grayish-blue-color);
-  margin-bottom: 74px;
-  text-align: center;
-}
-
-.subscribe__form {
-  display: flex;
-  flex-direction: column;
-  @media screen and(min-width: 768px) {
-    flex-direction: row;
+  &__title {
+    @include font("Poppins", 600, 33px, 54px, 0);
+    color: var(--grayish-blue-color);
+    margin-bottom: 74px;
+    text-align: center;
   }
-}
 
-.subscribe__input-field {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 25px 31px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 20px;
-  @media screen and(min-width: 768px) {
-    width: 421px;
-    margin-bottom: 0;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @media screen and(min-width: 768px) {
+      flex-direction: row;
+    }
   }
-}
 
-.subscribe__input {
-  @include font("Montserrat", 400, 17px, 17px, 0);
-  color: var(--dark-blue-color-4);
-  border: none;
-  outline: none;
-  margin-left: 14px;
-  &::placeholder {
+  &__input-field {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px 31px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    @media screen and(min-width: 768px) {
+      width: 421px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    @include font("Montserrat", 400, 17px, 17px, 0);
     color: var(--dark-blue-color-4);
-  }
-}
-
-.subscribe__button {
-  border: none;
-  background: linear-gradient(180deg, var(--orange-tomato-color) 0%, var(--darker-orange-tomato-color) 100%);
-  border-radius: 10px;
-  padding: 25px 31px;
-  @include font("Open Sans", 600, 17px, 23px, 0);
-  @include transition(background-color, 200ms, ease-in-out);
-  color: #fff;
-
-  @media screen and(min-width: 768px) {
-    margin-left: 24px;
-    width: 180px;
+    border: none;
+    outline: none;
+    margin-left: 14px;
+    &::placeholder {
+      color: var(--dark-blue-color-4);
+    }
   }
 
-  &:hover {
-    background-color: var(--darker-orange-tomato-color);
-    @include transition(all, 200ms, ease-in-out);
-  }
-}
+  &__button {
+    border: none;
+    background: linear-gradient(
+      180deg,
+      var(--orange-tomato-color) 0%,
+      var(--darker-orange-tomato-color) 100%
+    );
+    border-radius: 10px;
+    padding: 25px 31px;
+    @include font("Open Sans", 600, 17px, 23px, 0);
+    @include transition(background-color, 200ms, ease-in-out);
+    color: #fff;
 
-.subscribe__circles_bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 0.1;
-}
+    @media screen and(min-width: 768px) {
+      margin-left: 24px;
+      width: 180px;
+    }
 
-.subscribe__circles_top {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0.1;
-}
+    &:hover {
+      background-color: var(--darker-orange-tomato-color);
+      @include transition(all, 200ms, ease-in-out);
+    }
+  }
 
-.subscribe__pluses {
-  position: absolute;
-  bottom: -70px;
-  right: 0;
-  z-index: -10;
-  @media screen and(min-width: 1440px) {
-    right: 50px;
+  &__circles_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
   }
-}
 
-.subscribe__send {
-  position: absolute;
-  top: -13px;
-  right: 0;
-  @media screen and(min-width: 768px) {
-    right: 30px;
+  &__circles_top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.1;
   }
-  @media screen and(min-width: 1024px) {
-    right: 50px;
+
+  &__pluses {
+    position: absolute;
+    bottom: -70px;
+    right: 0;
+    z-index: -10;
+    @media screen and(min-width: 1440px) {
+      right: 50px;
+    }
   }
-  @media screen and(min-width: 1440px) {
-    right: 115px;
+
+  &__send {
+    position: absolute;
+    top: -13px;
+    right: 0;
+    @media screen and(min-width: 768px) {
+      right: 30px;
+    }
+    @media screen and(min-width: 1024px) {
+      right: 50px;
+    }
+    @media screen and(min-width: 1440px) {
+      right: 115px;
+    }
   }
 }

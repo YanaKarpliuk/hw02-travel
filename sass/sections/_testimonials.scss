@@ -5,38 +5,34 @@
   @media screen and (min-width: 1024px) {
     flex-direction: row;
   }
-}
 
-.testimonials__desc {
-  flex: 1;
-}
+  &__desc {
+    flex: 1;
+  }
 
-.testimonials__subtitle {
-  @include font("Poppins", 600, 18px, 27px, 0);
-  color: var(--grayish-blue-color);
-  margin-bottom: 8px;
-  text-transform: uppercase
-}
+  &__subtitle {
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
 
-.testimonials__title {
-  @include font("Volkhov", 700, 50px, 64px, 0);
-  color: var(--dark-blue-color-2);
-  text-transform: capitalize;
-}
+  &__title {
+    text-transform: capitalize;
+  }
 
-.testimonials__review {
-  flex: 1;
-  padding: 37px;
-  padding-bottom: 0;
-  position: relative;
-}
+  &__review {
+    flex: 1;
+    padding: 37px;
+    padding-bottom: 0;
+    position: relative;
+  }
 
-.testimonials__reviewer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 68px;
-  height: 68px;
+  &__reviewer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 68px;
+    height: 68px;
+  }
 }
 
 .testimonials__text {
@@ -48,21 +44,19 @@
     0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
   border-radius: 10px;
   padding: 28px 68px 34px 34px;
-}
 
-.testimonials__text__feedback {
-  @include font("Poppins", 500, 16px, 32px, 0);
-  color: var(--grayish-blue-color);
-  margin-bottom: 34px;
-}
+  &__feedback {
+    @include font("Poppins", 500, 16px, 32px, 0);
+    color: var(--grayish-blue-color);
+    margin-bottom: 34px;
+  }
 
-.testimonials__text__name {
-  @include font("Poppins", 600, 18px, 27px, 0);
-  color: var(--grayish-blue-color);
-  margin-bottom: 5px;
-}
+  &__name {
+    margin-bottom: 5px;
+  }
 
-.testimonials__text__location {
-  @include font("Poppins", 500, 14px, 21px, 0);
-  color: var(--grayish-blue-color);
+  &__location {
+    @include font("Poppins", 500, 14px, 21px, 0);
+    color: var(--grayish-blue-color);
+  }
 }

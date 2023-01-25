@@ -20,14 +20,10 @@
 }
 
 .booking__subtitle {
-  @include font("Poppins", 600, 18px, 27px, 0);
-  color: var(--grayish-blue-color);
   margin-bottom: 15px;
 }
 
 .booking__title {
-  @include font("Volkhov", 700, 50px, 64px, 0);
-  color: var(--dark-blue-color-2);
   margin-bottom: 31px;
 }
 
@@ -39,33 +35,31 @@
 
 .booking__item {
   display: flex;
-}
 
-.booking__item:not(:last-child) {
-  margin-bottom: 48px;
-}
+  &:not(:last-child) {
+    margin-bottom: 48px;
+  }
 
-.booking__item-bg {
-  border-radius: 13px;
-  width: 47px;
-  height: 47px;
-  min-width: 47px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 21px;
-}
+  &-bg {
+    border-radius: 13px;
+    width: 47px;
+    height: 47px;
+    min-width: 47px;
+    @include centered();
+    margin-right: 21px;
+  }
 
-.booking__item_yellow {
-  background-color: var(--dark-yellow-color);
-}
+  &_yellow {
+    background-color: var(--dark-yellow-color);
+  }
 
-.booking__item_red {
-  background-color: var(--darker-tomato-color);
-}
+  &_red {
+    background-color: var(--darker-tomato-color);
+  }
 
-.booking__item_blue {
-  background-color: var(--emerald-blue-color);
+  &_blue {
+    background-color: var(--emerald-blue-color);
+  }
 }
 
 .booking__content__title {
@@ -129,7 +123,6 @@
   @media screen and (min-width: 450px) {
     display: block;
     position: absolute;
-    // bottom: 52px;
     top: 215px;
     z-index: 2;
     right: 15%;

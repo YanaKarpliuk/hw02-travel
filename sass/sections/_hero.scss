@@ -1,10 +1,3 @@
-.hero {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 97px;
-  padding-top: 50px;
-}
-
 .header {
   display: none;
   @media screen and (min-width: 1024px) {
@@ -38,130 +31,137 @@
   margin-right: 86px;
   display: flex;
   align-items: center;
-}
 
-.nav__list {
-  display: flex;
-}
-
-.nav__item {
-  @include transition(scale, 200ms, ease-in-out);
-  &:hover {
-    scale: 110%;
-    @include transition(scale, 200ms, ease-in-out);
+  &__list {
+    display: flex;
   }
-  &:hover > .nav__link {
-    color: var(--tomato-color);
+
+  &__item {
+    @include transition(scale, 200ms, ease-in-out);
+    &:hover {
+      scale: 110%;
+      @include transition(scale, 200ms, ease-in-out);
+    }
+    &:hover > .nav__link {
+      color: var(--tomato-color);
+      @include transition(color, 200ms, ease-in-out);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 60px;
+  }
+
+  &__link {
+    color: var(--dark-color);
+    @include font("Product Sans Regular", 400, 17px, 22px, 0);
     @include transition(color, 200ms, ease-in-out);
   }
-}
-
-.nav__item:not(:last-child) {
-  margin-right: 60px;
-}
-
-.nav__link {
-  color: var(--dark-color);
-  @include font("Product Sans Regular", 400, 17px, 22px, 0);
-  @include transition(color, 200ms, ease-in-out);
 }
 
 .options {
   display: flex;
   align-items: center;
-}
 
-.options__signup {
-  @include font("Product Sans Regular", 400, 17px, 22px, 0);
-  @include transition(color, 200ms, ease-in-out);
-  color: var(--dark-color);
-  margin-right: 42px;
-  background-color: transparent;
-  border: 1px solid var(--dark-color);
-  border-radius: 5px;
-  padding: 9px 22px;
-  &:hover {
-    color: var(--tomato-color);
+  &__signup {
+    @include font("Product Sans Regular", 400, 17px, 22px, 0);
     @include transition(color, 200ms, ease-in-out);
+    color: var(--dark-color);
+    margin-right: 42px;
+    background-color: transparent;
+    border: 1px solid var(--dark-color);
+    border-radius: 5px;
+    padding: 9px 22px;
+    &:hover {
+      color: var(--tomato-color);
+      @include transition(color, 200ms, ease-in-out);
+    }
+  }
+
+  &__login {
+    @include font("Product Sans Regular", 400, 17px, 22px, 0);
+    @include transition(color, 200ms, ease-in-out);
+    color: var(--dark-color);
+    margin-right: 52px;
+    &:hover {
+      color: var(--tomato-color);
+      @include transition(color, 200ms, ease-in-out);
+    }
+  }
+
+  &__language {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:hover > .options__language__name {
+      color: var(--tomato-color);
+      @include transition(color, 200ms, ease-in-out);
+    }
+  }
+
+  &__language__name {
+    @include font("Product Sans Regular", 400, 17px, 22px, 0);
+    @include transition(color, 200ms, ease-in-out);
+    color: var(--dark-color);
+    margin-right: 7px;
   }
 }
 
-.options__login {
-  @include font("Product Sans Regular", 400, 17px, 22px, 0);
-  @include transition(color, 200ms, ease-in-out);
-  color: var(--dark-color);
-  margin-right: 52px;
-  &:hover {
-    color: var(--tomato-color);
-    @include transition(color, 200ms, ease-in-out);
-  }
-}
-
-.options__language {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  &:hover > .options__language__name {
-    color: var(--tomato-color);
-    @include transition(color, 200ms, ease-in-out);
-  }
-}
-
-.options__language__name {
-  @include font("Product Sans Regular", 400, 17px, 22px, 0);
-  @include transition(color, 200ms, ease-in-out);
-  color: var(--dark-color);
-  margin-right: 7px;
-}
-
-.hero__content {
-  padding-top: 30px;
-  display: flex;
+.hero {
   position: relative;
-  @media screen and(min-width: 1024px) {
-    padding-top: 0;
-  }
-  @media screen and(min-width: 1440px) {
-    justify-content: end;
-  }
-}
+  z-index: 1;
+  margin-bottom: 97px;
+  padding-top: 50px;
 
-.hero__desc {
-  margin-top: 100px;
-  @media screen and(min-width: 1024px) {
-    max-width: 700px;
+  &__content {
+    padding-top: 30px;
+    display: flex;
+    position: relative;
+    @media screen and(min-width: 1024px) {
+      padding-top: 0;
+    }
+    @media screen and(min-width: 1440px) {
+      justify-content: end;
+    }
   }
 
-  @media screen and(min-width: 1440px) {
-    margin-top: 0;
-    width: 545px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(0, -50%);
+  &__desc {
+    margin-top: 100px;
+    @media screen and(min-width: 1024px) {
+      max-width: 700px;
+    }
+
+    @media screen and(min-width: 1440px) {
+      margin-top: 0;
+      width: 545px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
   }
-}
 
-.hero__tagline {
-  @include font("Poppins", 700, 20px, 30px, 0);
-  text-transform: uppercase;
-  color: var(--tomato-color);
-  margin-bottom: 24px;
-}
-
-.hero__header {
-  @include font("Volkhov", 700, 64px, 69px, -0.04em);
-  color: var(--dark-blue-color);
-  margin-bottom: 30px;
-  @media screen and(min-width: 1024px) {
-    @include font("Volkhov", 700, 84px, 89px, -0.04em);
+  &__tagline {
+    @include font("Poppins", 700, 20px, 30px, 0);
+    text-transform: uppercase;
+    color: var(--tomato-color);
+    margin-bottom: 24px;
   }
-}
 
-.hero__text {
-  @include font("Poppins", 500, 16px, 30px, 0);
-  color: var(--grayish-blue-color);
-  margin-bottom: 34px;
+  &__header {
+    @include font("Volkhov", 700, 64px, 69px, -0.04em);
+    color: var(--dark-blue-color);
+    margin-bottom: 30px;
+    @media screen and(min-width: 1024px) {
+      @include font("Volkhov", 700, 84px, 89px, -0.04em);
+    }
+  }
+
+  &__text {
+    @include font("Poppins", 500, 16px, 30px, 0);
+    color: var(--grayish-blue-color);
+    margin-bottom: 34px;
+  }
 }
 
 .cta {
@@ -170,110 +170,108 @@
   @media screen and(min-width: 450px) {
     flex-direction: row;
   }
-}
 
-.cta__findout {
-  background-color: var(--orange-color);
-  color: #fff;
-  border: none;
-  @include transition(background-color, 200ms, ease-in-out);
-  @include font("Product Sans Medium Regular", 500, 18px, 23px, 0);
-  padding: 19px 27px;
-  border-radius: 10px;
-  box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
-  margin-bottom: 20px;
-  @media screen and(min-width: 450px) {
-    margin-right: 44px;
-    margin-bottom: 0;
-  }
-  &:hover {
-    background-color: var(--orange-tomato-color);
+  &__findout {
+    background-color: var(--orange-color);
+    color: #fff;
+    border: none;
     @include transition(background-color, 200ms, ease-in-out);
+    @include font("Product Sans Medium Regular", 500, 18px, 23px, 0);
+    padding: 19px 27px;
+    border-radius: 10px;
+    box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+    margin-bottom: 20px;
+    @media screen and(min-width: 450px) {
+      margin-right: 44px;
+      margin-bottom: 0;
+    }
+    &:hover {
+      background-color: var(--orange-tomato-color);
+      @include transition(background-color, 200ms, ease-in-out);
+    }
   }
-}
 
-.cta__play {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  @include font("Poppins", 500, 17px, 26px, 0);
-  color: var(--gray-color);
-  &:hover > .cta__play-bg {
-    background-color: var(--darker-tomato-color);
+  &__play {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    @include font("Poppins", 500, 17px, 26px, 0);
+    color: var(--gray-color);
+    &:hover > .cta__play-bg {
+      background-color: var(--darker-tomato-color);
+      @include transition(background-color, 200ms, ease-in-out);
+    }
+  }
+
+  &__play-bg {
     @include transition(background-color, 200ms, ease-in-out);
+    background-color: var(--tomato-color);
+    border-radius: 50%;
+    height: 52px;
+    width: 52px;
+    min-width: 52px;
+    @include centered();
+    margin-right: 21px;
   }
-}
-
-.cta__play-bg {
-  @include transition(background-color, 200ms, ease-in-out);
-  background-color: var(--tomato-color);
-  border-radius: 50%;
-  height: 52px;
-  width: 52px;
-  min-width: 52px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 21px;
 }
 
 .hero__images {
   position: relative;
-}
 
-.hero__images-traveller {
-  display: none;
-  height: 765px;
-  width: 765px;
-  min-height: 765px;
-  min-width: 765px;
-  position: relative;
-  z-index: 2;
-  @media screen and (min-width: 1440px) {
-    display: block;
-  }
-}
-
-.hero__images-plane_1 {
-  display: none;
-  @media screen and (min-width: 1024px) {
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: 90px;
-    z-index: 5;
-  }
-  @media screen and (min-width: 1440px) {
-    left: 160px;
-  }
-}
-
-.hero__images-plane_2 {
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 300px;
-    right: 50px;
+  &-traveller {
+    display: none;
+    height: 765px;
+    width: 765px;
+    min-height: 765px;
+    min-width: 765px;
+    position: relative;
+    z-index: 2;
+    @media screen and (min-width: 1440px) {
+      display: block;
+    }
   }
 
-  @media screen and (min-width: 1024px) {
-    right: -80px;
-    top: 110px;
+  &-plane_1 {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: block;
+      position: absolute;
+      top: 60px;
+      left: 90px;
+      z-index: 5;
+    }
+    @media screen and (min-width: 1440px) {
+      left: 160px;
+    }
   }
 
-  @media screen and (min-width: 1440px) {
-    z-index: 5;
-    right: 0;
-    top: 110px;
-  }
-}
+  &-plane_2 {
+    display: none;
 
-.hero__images-plane_animated {
-  animation: nudge linear 3s forwards;
-  animation-iteration-count: 1;
+    @media screen and (min-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 300px;
+      right: 50px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      right: -80px;
+      top: 110px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      z-index: 5;
+      right: 0;
+      top: 110px;
+    }
+  }
+
+  &-plane_animated {
+    animation: nudge linear 3s forwards;
+    animation-iteration-count: 1;
+  }
 }
 
 @keyframes nudge {

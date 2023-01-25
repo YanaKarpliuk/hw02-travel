@@ -4,15 +4,11 @@
 }
 
 .destinations__subtitle {
-  @include font("Poppins", 600, 18px, 27px, 0);
-  color: var(--grayish-blue-color);
   text-align: center;
   margin-bottom: 10px;
 }
 
 .destinations__title {
-  @include font("Volkhov", 700, 50px, 64px, 0);
-  color: var(--dark-blue-color-2);
   text-align: center;
   margin-bottom: 66px;
   line-break: anywhere;
@@ -27,6 +23,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     row-gap: 40px;
+    justify-items: center;
   }
   @media screen and (min-width: 1440px) {
     display: flex;
@@ -46,6 +43,7 @@
     drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185))
     drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
   @include transition(all, 200ms, ease-in-out);
+  max-width: 400px;
   &:hover {
     scale: 110%;
     filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.04))
@@ -56,42 +54,42 @@
       drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.02481481));
     @include transition(all, 200ms, ease-in-out);
   }
-}
 
-.destinations__item:not(:last-child) {
-  margin-bottom: 30px;
-  @media screen and (min-width: 1024px) {
-    margin-bottom: 0;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 0;
+    }
   }
-}
 
-.destinations__item__content {
-  position: absolute;
-  bottom: -1px;
-  left: -1px;
-  right: -1px;
-  padding: 27px 25px 42px 20px;
-  background-color: #fff;
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
-}
+  &__content {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    padding: 27px 25px 42px 20px;
+    background-color: #fff;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
 
-.destinations__item-info {
-  @include font("Poppins", 500, 18px, 22px, 0);
-  color: var(--grayish-blue-color);
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 19px;
-}
+  &-info {
+    @include font("Poppins", 500, 18px, 22px, 0);
+    color: var(--grayish-blue-color);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 19px;
+  }
 
-.destinations__item-time {
-  @include font("Poppins", 500, 16px, 20px, 0);
-  color: var(--grayish-blue-color);
-  display: flex;
-}
+  &-time {
+    @include font("Poppins", 500, 16px, 20px, 0);
+    color: var(--grayish-blue-color);
+    display: flex;
+  }
 
-.destinations__item-time-days {
-  margin-left: 14px;
+  &-time-days {
+    margin-left: 14px;
+  }
 }
 
 .destinations__decore {
