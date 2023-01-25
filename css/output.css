@@ -1177,7 +1177,7 @@ body {
   display: flex;
   margin-bottom: 26px; }
 
-.footer__social__item {
+.footer__social__link {
   border-radius: 50%;
   height: 41px;
   width: 41px;
@@ -1189,16 +1189,32 @@ body {
   transition-property: box-shadow;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out; }
-  .footer__social__item:hover {
+  .footer__social__link:hover {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
     transition-property: box-shadow;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out; }
 
+.facebook {
+  background-image: url(../../images/Facebook.svg);
+  background-repeat: no-repeat;
+  background-size: 8px;
+  background-position: center; }
+
+.footer__social__icon {
+  height: 16px;
+  width: 16px; }
+
+.twitter {
+  background-image: url(../../images/twitter.svg);
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: center; }
+
 .footer__social__item:not(:last-child) {
   margin-right: 25px; }
 
-.footer__social__item_colorful {
+.footer__social__link_colorful {
   background: conic-gradient(from 180deg at 50% 50%, #b8d2f1 0deg, #f289aa 60deg, #c68bf0 106.09deg, #d164da 153.75deg, #c963e8 221.25deg, #bfc2e8 258.75deg, #ffc999 288.75deg, #d0d8c9 315deg, #bad0f1 334.13deg, #ced8cb 358.97deg, rgba(255, 255, 255, 0) 360deg); }
 
 .footer__discover__title {
