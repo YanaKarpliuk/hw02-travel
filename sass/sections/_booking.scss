@@ -72,7 +72,7 @@
   color: var(--grayish-blue-color);
 }
 
-.booking__images {
+.booking__cards {
   flex: 1;
   position: relative;
 }
@@ -92,7 +92,7 @@
   }
 }
 
-.booking__image-1 {
+.booking__card-1 {
   position: relative;
   z-index: 1;
   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
@@ -101,8 +101,13 @@
     0px 20px 13px rgba(0, 0, 0, 0.01),
     0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
     0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
-  width: 370px;
+  max-width: 370px;
   border-radius: 26px;
+  padding: 20px 25px 31px;
+  background-color: #fff;
+  @media screen and (min-width: 450px) {
+    width: 370px;
+  }
   @media screen and (min-width: 768px) {
     margin-left: 30px;
   }
@@ -112,12 +117,63 @@
     left: 0;
     margin-left: 0;
   }
+
+  &__image {
+    border: 1px solid #000;
+    border-radius: 24px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    @include font("Poppins", 500, 18px, 22px, 0.015em);
+    color: var(--darkest-color);
+    margin-bottom: 13px;
+  }
+
+  &__info {
+    @include font("Poppins", 500, 16px, 20px, -0.005em);
+    color: var(--light-grayish-blue-color);
+    margin-bottom: 21px;
+  }
+
+  &__list {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    background-color: var(--light-gray-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    @include centered();
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 13px;
+  }
+
+  &__additional {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__people {
+    display: flex;
+
+    &-text {
+      @include font("Poppins", 500, 16px, 20px, -0.02em);
+      color: var(--light-grayish-blue-color);
+      margin-left: 15px;
+    }
+  }
 }
 
-.booking__image-2 {
+.booking__card-2 {
   display: none;
   @media screen and (min-width: 450px) {
-    display: block;
+    display: flex;
     position: absolute;
     top: 215px;
     z-index: 2;
@@ -130,6 +186,8 @@
       0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
     width: 263px;
     border-radius: 18px;
+    padding: 18px 25px 22px 20px;
+    background-color: #fff;
   }
   @media screen and (min-width: 768px) {
     right: 30%;
@@ -138,5 +196,34 @@
     right: 0;
     top: unset;
     bottom: 62px;
+  }
+
+  &__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 11px;
+  }
+
+  &__status {
+    @include font("Poppins", 500, 14px, 17px, -0.035em);
+    color: var(--light-grayish-blue-color);
+    margin-bottom: 6px;
+  }
+
+  &__title {
+    @include font("Poppins", 500, 18px, 22px, -0.015em);
+    color: var(--darkest-color);
+    margin-bottom: 14px;
+  }
+
+  &__completion {
+    @include font("Poppins", 500, 14px, 17px, -0.055em);
+    color: var(--darkest-color);
+    margin-bottom: 10px;
+  }
+
+  &__percetrage {
+    color: var(--violet-color);
   }
 }

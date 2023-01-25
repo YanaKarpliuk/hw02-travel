@@ -74,11 +74,13 @@ body {
   --grayish-blue-color: #5E6282;
   --orange-color: #F1A501;
   --gray-color: #686D77;
+  --light-gray-color: #F5F5F5;
   --emerald-blue-color: #006380;
   --dark-yellow-color: #F0BB1F;
   --orange-tomato-color: #FF946D;
   --darker-orange-tomato-color: #FF7D68;
-  --light-violet-color: #dfd7f92f; }
+  --light-violet-color: #dfd7f92f;
+  --violet-color: #8A79DF; }
 
 .header {
   display: none; }
@@ -685,7 +687,7 @@ body {
   letter-spacing: 0;
   color: var(--grayish-blue-color); }
 
-.booking__images {
+.booking__cards {
   flex: 1;
   position: relative; }
 
@@ -703,42 +705,127 @@ body {
     .booking__section {
       right: 0; } }
 
-.booking__image-1 {
+.booking__card-1 {
   position: relative;
   z-index: 1;
   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
-  width: 370px;
-  border-radius: 26px; }
+  max-width: 370px;
+  border-radius: 26px;
+  padding: 20px 25px 31px;
+  background-color: #fff; }
+  @media screen and (min-width: 450px) {
+    .booking__card-1 {
+      width: 370px; } }
   @media screen and (min-width: 768px) {
-    .booking__image-1 {
+    .booking__card-1 {
       margin-left: 30px; } }
   @media screen and (min-width: 1024px) {
-    .booking__image-1 {
+    .booking__card-1 {
       position: absolute;
       bottom: 10px;
       left: 0;
       margin-left: 0; } }
+  .booking__card-1__image {
+    border: 1px solid #000;
+    border-radius: 24px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-bottom: 26px; }
+  .booking__card-1__title {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.015em;
+    color: var(--darkest-color);
+    margin-bottom: 13px; }
+  .booking__card-1__info {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.005em;
+    color: var(--light-grayish-blue-color);
+    margin-bottom: 21px; }
+  .booking__card-1__list {
+    display: flex;
+    margin-bottom: 30px; }
+  .booking__card-1__item {
+    background-color: var(--light-gray-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .booking__card-1__item:not(:last-child) {
+    margin-right: 13px; }
+  .booking__card-1__additional {
+    display: flex;
+    justify-content: space-between; }
+  .booking__card-1__people {
+    display: flex; }
+    .booking__card-1__people-text {
+      font-family: "Poppins";
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+      color: var(--light-grayish-blue-color);
+      margin-left: 15px; }
 
-.booking__image-2 {
+.booking__card-2 {
   display: none; }
   @media screen and (min-width: 450px) {
-    .booking__image-2 {
-      display: block;
+    .booking__card-2 {
+      display: flex;
       position: absolute;
       top: 215px;
       z-index: 2;
       right: 15%;
       box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
       width: 263px;
-      border-radius: 18px; } }
+      border-radius: 18px;
+      padding: 18px 25px 22px 20px;
+      background-color: #fff; } }
   @media screen and (min-width: 768px) {
-    .booking__image-2 {
+    .booking__card-2 {
       right: 30%; } }
   @media screen and (min-width: 1024px) {
-    .booking__image-2 {
+    .booking__card-2 {
       right: 0;
       top: unset;
       bottom: 62px; } }
+  .booking__card-2__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 11px; }
+  .booking__card-2__status {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.035em;
+    color: var(--light-grayish-blue-color);
+    margin-bottom: 6px; }
+  .booking__card-2__title {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    color: var(--darkest-color);
+    margin-bottom: 14px; }
+  .booking__card-2__completion {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.055em;
+    color: var(--darkest-color);
+    margin-bottom: 10px; }
+  .booking__card-2__percetrage {
+    color: var(--violet-color); }
 
 .testimonials {
   display: flex;
