@@ -108,6 +108,12 @@ body {
 .menu {
   display: flex; }
 
+.logo {
+  margin-right: 20px; }
+  @media screen and (min-width: 1440px) {
+    .logo {
+      margin-right: 0; } }
+
 .nav {
   margin-right: 86px;
   display: flex;
@@ -227,6 +233,7 @@ body {
       max-width: 700px; } }
   @media screen and (min-width: 1440px) {
     .hero__desc {
+      margin-top: 0;
       width: 545px;
       position: absolute;
       left: 0;
@@ -353,12 +360,12 @@ body {
     .hero__images-plane_1 {
       display: block;
       position: absolute;
-      top: 70px;
+      top: 60px;
       left: 90px;
       z-index: 5; } }
   @media screen and (min-width: 1440px) {
     .hero__images-plane_1 {
-      left: 150px; } }
+      left: 160px; } }
 
 .hero__images-plane_2 {
   display: none; }
@@ -371,6 +378,11 @@ body {
   @media screen and (min-width: 1024px) {
     .hero__images-plane_2 {
       right: -80px;
+      top: 110px; } }
+  @media screen and (min-width: 1440px) {
+    .hero__images-plane_2 {
+      z-index: 5;
+      right: 0;
       top: 110px; } }
 
 .hero__images-plane_animated {
@@ -399,14 +411,14 @@ body {
   right: 0; }
 
 .services {
-  margin-bottom: 123px;
+  margin-bottom: 156px;
   position: relative;
   z-index: 3; }
 
 .services__decore {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 50px;
   z-index: -1; }
 
 .services__subtitle {
@@ -461,21 +473,17 @@ body {
     .services__item {
       margin-bottom: 0; } }
 
-@media screen and (min-width: 1024px) {
-  .services__item:not(:last-child) {
-    margin-right: 50px; } }
-
 .services__item_hover_transparent {
   position: absolute;
-  bottom: -50px;
-  left: -50px;
+  bottom: -30px;
+  left: -25px;
   z-index: -2; }
 
 .services__item_hover {
   opacity: 0;
   position: absolute;
-  bottom: -50px;
-  left: -50px;
+  bottom: -30px;
+  left: -25px;
   z-index: -1;
   transition-property: opacity;
   transition-duration: 200ms;
@@ -605,8 +613,17 @@ body {
   align-items: center; }
   @media screen and (min-width: 1024px) {
     .destinations__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+      row-gap: 40px; } }
+  @media screen and (min-width: 1440px) {
+    .destinations__list {
+      display: flex;
       flex-direction: row;
-      justify-content: space-around; } }
+      width: 1040px;
+      margin: 0 auto;
+      justify-content: space-between; } }
 
 .destinations__item {
   position: relative;
@@ -622,7 +639,7 @@ body {
     transition-timing-function: ease-in-out; }
 
 .destinations__item:not(:last-child) {
-  margin-bottom: 20px; }
+  margin-bottom: 30px; }
   @media screen and (min-width: 1024px) {
     .destinations__item:not(:last-child) {
       margin-bottom: 0; } }
@@ -707,6 +724,10 @@ body {
   color: var(--dark-blue-color-2);
   margin-bottom: 31px; }
 
+@media screen and (min-width: 1024px) {
+  .booking__list {
+    width: 395px; } }
+
 .booking__item {
   display: flex; }
 
@@ -778,7 +799,7 @@ body {
   @media screen and (min-width: 1024px) {
     .booking__image-1 {
       position: absolute;
-      bottom: 0;
+      bottom: 10px;
       left: 0;
       margin-left: 0; } }
   @media screen and (min-width: 1500px) {
@@ -805,7 +826,7 @@ body {
     .booking__image-2 {
       right: 0;
       top: unset;
-      bottom: 52px; } }
+      bottom: 62px; } }
   @media screen and (min-width: 1500px) {
     .booking__image-2 {
       right: 10%; } }
@@ -828,7 +849,8 @@ body {
   line-height: 27px;
   letter-spacing: 0;
   color: var(--grayish-blue-color);
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  text-transform: uppercase; }
 
 .testimonials__title {
   font-family: "Volkhov";
@@ -836,7 +858,8 @@ body {
   font-size: 50px;
   line-height: 64px;
   letter-spacing: 0;
-  color: var(--dark-blue-color-2); }
+  color: var(--dark-blue-color-2);
+  text-transform: capitalize; }
 
 .testimonials__review {
   flex: 1;
@@ -913,9 +936,18 @@ body {
     transition-timing-function: ease-in-out;
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
     border-radius: 10px; }
+  .logos__item:hover > .logos__item__logo {
+    transition-property: filter;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    filter: grayscale(0); }
 
 .logos__item__logo {
-  object-fit: cover; }
+  object-fit: cover;
+  transition-property: filter;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  filter: grayscale(100%); }
 
 .subscribe_box {
   margin-bottom: 166px; }

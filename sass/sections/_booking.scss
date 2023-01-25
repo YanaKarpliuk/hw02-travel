@@ -31,6 +31,12 @@
   margin-bottom: 31px;
 }
 
+.booking__list {
+  @media screen and (min-width: 1024px) {
+    width: 395px;
+  }
+}
+
 .booking__item {
   display: flex;
 }
@@ -104,13 +110,11 @@
   width: 370px;
   border-radius: 26px;
   @media screen and (min-width: 768px) {
-    // position: absolute;
-    // right: 50%;
     margin-left: 30px;
   }
   @media screen and (min-width: 1024px) {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     margin-left: 0;
   }
@@ -144,7 +148,7 @@
   @media screen and (min-width: 1024px) {
     right: 0;
     top: unset;
-    bottom: 52px;
+    bottom: 62px;
   }
   @media screen and (min-width: 1500px) {
     right: 10%;

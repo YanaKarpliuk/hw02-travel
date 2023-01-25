@@ -1,5 +1,5 @@
 .services {
-  margin-bottom: 123px;
+  margin-bottom: 156px;
   position: relative;
   z-index: 3;
 }
@@ -7,7 +7,7 @@
 .services__decore {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 50px;
   z-index: -1;
 }
 
@@ -57,24 +57,18 @@
   }
 }
 
-.services__item:not(:last-child) {
-  @media screen and(min-width: 1024px) {
-    margin-right: 50px;
-  }
-}
-
 .services__item_hover_transparent {
   position: absolute;
-  bottom: -50px;
-  left: -50px;
+  bottom: -30px;
+  left: -25px;
   z-index: -2;
 }
 
 .services__item_hover {
   opacity: 0;
   position: absolute;
-  bottom: -50px;
-  left: -50px;
+  bottom: -30px;
+  left: -25px;
   z-index: -1;
   @include transition(opacity, 200ms, ease-in-out);
 }
@@ -100,10 +94,6 @@
     @include transition(opacity, 200ms, ease-in-out);
   }
 }
-
-// .services__item:hover > .services__item_hover {
-//   display: block;
-// }
 
 .services__item__images {
   position: relative;

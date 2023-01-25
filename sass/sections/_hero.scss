@@ -27,6 +27,13 @@
   display: flex;
 }
 
+.logo {
+  margin-right: 20px;
+  @media screen and (min-width: 1440px) {
+    margin-right: 0;
+  }
+}
+
 .nav {
   margin-right: 86px;
   display: flex;
@@ -126,6 +133,7 @@
   }
 
   @media screen and(min-width: 1440px) {
+    margin-top: 0;
     width: 545px;
     position: absolute;
     left: 0;
@@ -232,12 +240,12 @@
   @media screen and (min-width: 1024px) {
     display: block;
     position: absolute;
-    top: 70px;
+    top: 60px;
     left: 90px;
     z-index: 5;
   }
   @media screen and (min-width: 1440px) {
-    left: 150px;
+    left: 160px;
   }
 }
 
@@ -253,6 +261,12 @@
 
   @media screen and (min-width: 1024px) {
     right: -80px;
+    top: 110px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    z-index: 5;
+    right: 0;
     top: 110px;
   }
 }

@@ -15,11 +15,13 @@
   @include font("Poppins", 600, 18px, 27px, 0);
   color: var(--grayish-blue-color);
   margin-bottom: 8px;
+  text-transform: uppercase
 }
 
 .testimonials__title {
   @include font("Volkhov", 700, 50px, 64px, 0);
   color: var(--dark-blue-color-2);
+  text-transform: capitalize;
 }
 
 .testimonials__review {
