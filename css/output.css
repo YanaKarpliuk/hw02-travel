@@ -220,17 +220,18 @@ body {
     .hero__content {
       justify-content: end; } }
 
-@media screen and (min-width: 1024px) {
-  .hero__desc {
-    margin-top: 100px;
-    max-width: 700px; } }
-@media screen and (min-width: 1440px) {
-  .hero__desc {
-    width: 545px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(0, -50%); } }
+.hero__desc {
+  margin-top: 100px; }
+  @media screen and (min-width: 1024px) {
+    .hero__desc {
+      max-width: 700px; } }
+  @media screen and (min-width: 1440px) {
+    .hero__desc {
+      width: 545px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%); } }
 
 .hero__tagline {
   font-family: "Poppins";
@@ -365,7 +366,7 @@ body {
     .hero__images-plane_2 {
       display: block;
       position: absolute;
-      top: 250px;
+      top: 300px;
       right: 50px; } }
   @media screen and (min-width: 1024px) {
     .hero__images-plane_2 {
@@ -1261,7 +1262,16 @@ body {
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  transition-property: color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out; }
+
+.mobile-menu__nav__item:hover > .mobile-menu__nav__link {
+  color: var(--tomato-color);
+  transition-property: color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out; }
 
 .mobile-menu__nav__item:not(:last-child) {
   margin-bottom: 15px; }
@@ -1281,7 +1291,15 @@ body {
   background-color: transparent;
   border: 1px solid var(--dark-color);
   border-radius: 5px;
-  padding: 9px 22px; }
+  padding: 9px 22px;
+  transition-property: color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out; }
+  .mobile-menu__options__signup:hover {
+    color: var(--tomato-color);
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out; }
 
 .mobile-menu__options__login {
   font-family: "Product Sans Regular";
@@ -1289,8 +1307,16 @@ body {
   font-size: 25px;
   line-height: 30px;
   letter-spacing: 0;
+  transition-property: color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
   color: var(--dark-color);
   margin-right: 52px; }
+  .mobile-menu__options__login:hover {
+    color: var(--tomato-color);
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out; }
 
 .mobile-menu__top {
   display: flex;
