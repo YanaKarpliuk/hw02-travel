@@ -1,8 +1,9 @@
 .hero {
   position: relative;
   z-index: 1;
-  margin-bottom: 97px;
+  // margin-bottom: 97px;
   padding-top: 50px;
+  height: 100vh;
 }
 
 .header {
@@ -28,6 +29,18 @@
   display: flex;
 }
 
+.nav__item {
+  @include transition(scale, 200ms, ease-in-out);
+  &:hover {
+    scale: 110%;
+    @include transition(scale, 200ms, ease-in-out);
+  }
+  &:hover > .nav__link {
+    color: var(--tomato-color);
+    @include transition(color, 200ms, ease-in-out);
+  }
+}
+
 .nav__item:not(:last-child) {
   margin-right: 60px;
 }
@@ -35,6 +48,7 @@
 .nav__link {
   color: var(--dark-color);
   @include font("Product Sans Regular", 400, 17px, 22px, 0);
+  @include transition(color, 200ms, ease-in-out);
 }
 
 .options {
@@ -44,27 +58,43 @@
 
 .options__signup {
   @include font("Product Sans Regular", 400, 17px, 22px, 0);
+  @include transition(color, 200ms, ease-in-out);
   color: var(--dark-color);
   margin-right: 42px;
   background-color: transparent;
   border: 1px solid var(--dark-color);
   border-radius: 5px;
   padding: 9px 22px;
+  &:hover {
+    color: var(--tomato-color);
+    @include transition(color, 200ms, ease-in-out);
+  }
 }
 
 .options__login {
   @include font("Product Sans Regular", 400, 17px, 22px, 0);
+  @include transition(color, 200ms, ease-in-out);
   color: var(--dark-color);
   margin-right: 52px;
+  &:hover {
+    color: var(--tomato-color);
+    @include transition(color, 200ms, ease-in-out);
+  }
 }
 
 .options__language {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  &:hover > .options__language__name {
+    color: var(--tomato-color);
+    @include transition(color, 200ms, ease-in-out);
+  }
 }
 
 .options__language__name {
   @include font("Product Sans Regular", 400, 17px, 22px, 0);
+  @include transition(color, 200ms, ease-in-out);
   color: var(--dark-color);
   margin-right: 7px;
 }
@@ -130,6 +160,7 @@
   background-color: var(--orange-color);
   color: #fff;
   border: none;
+  @include transition(background-color, 200ms, ease-in-out);
   @include font("Product Sans Medium Regular", 500, 18px, 23px, 0);
   padding: 19px 27px;
   border-radius: 10px;
@@ -138,6 +169,10 @@
   @media screen and(min-width: 450px) {
     margin-right: 44px;
     margin-bottom: 0;
+  }
+  &:hover {
+    background-color: var(--orange-tomato-color);
+    @include transition(background-color, 200ms, ease-in-out);
   }
 }
 
@@ -148,9 +183,14 @@
   border: none;
   @include font("Poppins", 500, 17px, 26px, 0);
   color: var(--gray-color);
+  &:hover > .cta__play-bg {
+    background-color: var(--darker-tomato-color);
+    @include transition(background-color, 200ms, ease-in-out);
+  }
 }
 
 .cta__play-bg {
+  @include transition(background-color, 200ms, ease-in-out);
   background-color: var(--tomato-color);
   border-radius: 50%;
   height: 52px;
@@ -186,6 +226,7 @@
     position: absolute;
     top: 70px;
     left: 90px;
+    z-index: 5;
   }
   @media screen and (min-width: 1440px) {
     left: 150px;
@@ -209,8 +250,8 @@
 }
 
 .hero__images-plane_animated {
-    animation: nudge linear 3s forwards;
-    animation-iteration-count: 1;
+  animation: nudge linear 3s forwards;
+  animation-iteration-count: 1;
 }
 
 @keyframes nudge {
